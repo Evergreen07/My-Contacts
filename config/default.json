@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://Arunava:LAKfYQKW1Hp8t81z@contacts-cluster.5b1dn.mongodb.net/mycontacts?retryWrites=true&w=majority",
+    "jwtsecret": "asdfgh12345"
+}
