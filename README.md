@@ -1,7 +1,16 @@
 # My Contacts
 ### Overview :
 This is an interactive & user-friendly Address Book / Contact Keeper application. The motivation behind it is to create a full-stack web application which users can use in their day to day lives. 
-<br> For a live preview, kindly visit http://mycontacts2021.herokuapp.com/
+<br> For a **live preview**, kindly visit http://mycontacts2021.herokuapp.com/
+
+### Table of Contents :
+* [Installation & Usage](https://github.com/Evergreen07/My-Contacts#installation--usage-)
+* [Features](https://github.com/Evergreen07/My-Contacts#features-)
+* [Technologies Used](https://github.com/Evergreen07/My-Contacts#technologies-used-)
+* [API Documentation]()
+* [Contributions](https://github.com/Evergreen07/My-Contacts#contributions-)
+
+
 
 ### Installation & Usage :
 
