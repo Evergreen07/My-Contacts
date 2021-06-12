@@ -9,7 +9,7 @@ This is an interactive & user-friendly Address Book / Contact Keeper application
 * [Installation & Usage](https://github.com/Evergreen07/My-Contacts#installation--usage-)
 * [Features](https://github.com/Evergreen07/My-Contacts#features-)
 * [Technologies Used](https://github.com/Evergreen07/My-Contacts#technologies-used-)
-* [API Documentation]()
+* [API Documentation](https://github.com/Evergreen07/My-Contacts/blob/master/README.md#api-documentation-)
 * [Contributions](https://github.com/Evergreen07/My-Contacts#contributions-) 
 
 
