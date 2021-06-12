@@ -1,18 +1,20 @@
 # My Contacts
-### Overview :
+## Overview :
 This is an interactive & user-friendly Address Book / Contact Keeper application. The motivation behind it is to create a full-stack web application which users can use in their day to day lives. 
-<br> For a **live preview**, kindly visit http://mycontacts2021.herokuapp.com/
+<br> For a **live preview**, kindly visit http://mycontacts2021.herokuapp.com/ 
 
-### Table of Contents :
+
+
+## Table of Contents :
 * [Installation & Usage](https://github.com/Evergreen07/My-Contacts#installation--usage-)
 * [Features](https://github.com/Evergreen07/My-Contacts#features-)
 * [Technologies Used](https://github.com/Evergreen07/My-Contacts#technologies-used-)
 * [API Documentation]()
-* [Contributions](https://github.com/Evergreen07/My-Contacts#contributions-)
+* [Contributions](https://github.com/Evergreen07/My-Contacts#contributions-) 
 
 
 
-### Installation & Usage :
+## Installation & Usage :
 
 Dependencies
 ```
@@ -29,7 +31,8 @@ npm run client   // React Client Only PORT:3000
 ```
 
 
-### Features :
+
+## Features :
 * **Register / Login :** Users can register & Login to their private account.
 * **View :** Lets users view all their personal contacts in *reverse-chronological order*.
 * **Create :** Lets users add new contacts i.e name, email, phone no. & type and finally save. 
@@ -41,10 +44,148 @@ npm run client   // React Client Only PORT:3000
 * **Responsiveness :** This application is completely responsive & produces a smooth user experience across Mobile Screens, Tablets & PCs.
  
  
-### Technologies Used :
+ 
+## Technologies Used :
 * **Front-End :-** React, HTML, CSS, JavaScript, CSS Flexbox & Grids.
 * **Backend & Database :-** Node JS, Express, MongoDB, JWT Authentication, Bcrypt Js.
-* **Deployment :-** Heroku, Heroku CLI.
+* **Deployment :-** Heroku, Heroku CLI. 
+
+
+
+## API Documentation :
+* **Register a User**<br><br>
+  * Request : [POST] /api/users
+    * Headers
+        ```
+        Content-type : application/json
+        ```
+    * Body 
+        ```
+        {
+          "name" : "",
+          "email" : "",
+          "password" : "",
+          "confirm_password" : ""
+        }
+        ```
+  * Response : 200 (application/json)
+    * Body 
+        ```
+        {
+          "token" : ""
+        }
+        ```
+        <br><br>
+* **Login a User**<br><br>
+  * Request : [POST] /api/auth
+      * Headers
+        ```
+        Content-type : application/json
+        ```
+      * Body 
+        ```
+        {
+          "email" : "",
+          "password" : ""
+        }
+        ```
+  * Response : 200 (application/json)
+       * Body 
+         ```
+         {
+           "token" : ""
+         }
+         ```
+         <br><br>
+* **Get user's Contacts**<br><br>
+  * Request : [GET] /api/contacts
+      * Headers
+        ```
+        x-auth-token : JWT_TOKEN
+        ```
+     
+  * Response : 200 (application/json)
+      * Body 
+        ```
+        {
+          "contacts" : []
+        }
+        ```
+        <br><br>
+* **Add new Contact**<br><br>
+  * Request : [POST] /api/contacts
+      * Headers
+        ```
+        x-auth-token : JWT_TOKEN
+        Content-type : application/json
+        ```
+      * Body
+        ```
+         {
+           "name":"",
+           "email":"",
+           "phone":"",
+           "type":""
+         }
+        ```
+     
+  * Response : 200 (application/json)
+    * Body
+        ```
+         {
+           "contact": {}
+         }
+        ```
+        <br><br>
+* **Update Contact**<br><br>
+  * Request : [PUT] /api/contacts/:id
+      * Parameters
+        ```
+        id: (A Unique Identifier of the Object)
+        ```
+      * Headers
+        ```
+        x-auth-token : JWT_TOKEN
+        Content-type : application/json
+        ```
+      * Body
+        ```
+         {
+           "name":"",
+           "email":"",
+           "phone":"",
+           "type":""
+         }
+        ```
+     
+  * Response : 200 (application/json)
+    * Body
+        ```
+         {
+           "contact": {}
+         }
+        ```
+        <br><br>
+* **Delete Contact**<br><br>
+  * Request : [DELETE] /api/contacts/:id
+      * Parameters
+        ```
+        id: (A Unique Identifier of the Object)
+        ```
+      * Headers
+        ```
+        x-auth-token : JWT_TOKEN
+        ```
+     
+  * Response : 200 (application/json)
+    * Body
+        ```
+         {
+           "msg" : "Contact Deleted"
+         }
+        ```
+    
+
 
 ### Contributions : 
 * You are free to clone & contribute to improve the app, also report bugs & help in making it even better.
